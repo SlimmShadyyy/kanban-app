@@ -5,7 +5,7 @@ import { Trash2, Plus } from "lucide-react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 
 // Connect to backend
-const socket = io("http://localhost:5000");
+const socket = io("https://kanban-app-snqa.onrender.com");
 
 const COLUMNS = ["To Do", "In Progress", "Done"];
 
