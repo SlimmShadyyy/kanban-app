@@ -2,10 +2,8 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import React from "react";
 
-// ✅ FIX: Correct import path (removed extra 'src')
 import KanbanBoard from "../../components/KanbanBoard"; 
 
-// Mock Socket.io so the test doesn't crash
 vi.mock("socket.io-client", () => ({
   default: () => ({
     on: vi.fn(),
@@ -17,7 +15,6 @@ vi.mock("socket.io-client", () => ({
 describe("KanbanBoard Unit Tests", () => {
   it("renders the main board title", () => {
     render(<KanbanBoard />);
-    // This looks for the <h2> we added earlier
     expect(screen.getByText("Kanban Board")).toBeInTheDocument();
   });
 
